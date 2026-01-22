@@ -7,3 +7,26 @@
 .content-container {
     align-items: center;
 }
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+@media (max-width:1024px) {
+    .content-container {
+        align-items: flex-start;
+    }
+
+    .image-container {
+        display: none;
+    }
+}
