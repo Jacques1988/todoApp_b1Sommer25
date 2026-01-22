@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 1450px;
+    width: 100%;
+    /* background-color: blue; */
+}
+
+.teaser {
+    font-size: 3rem;
+}
