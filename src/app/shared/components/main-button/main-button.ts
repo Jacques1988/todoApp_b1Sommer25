@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-main-button',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './main-button.css',
 })
 export class MainButton {
-
+  btnText = input<string>();
 }

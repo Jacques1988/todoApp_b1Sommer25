@@ -2,3 +2,9 @@
     font-size: 3rem;
     color: darkgrey;
 }
+
+@media (max-width:768px) {
+    .teaser {
+        font-size: 2rem;
+    }
+}
