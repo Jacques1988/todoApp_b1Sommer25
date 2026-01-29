@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input, inject } from '@angular/core';
+import { Task } from '../../shared/models/task';
+import { TaskService } from '../../services/task-service';
 
 @Component({
   selector: 'app-task-component',
@@ -7,5 +9,17 @@ import { Component } from '@angular/core';
   styleUrl: './task-component.css',
 })
 export class TaskComponent {
+  taskService = inject(TaskService);
+  task = input.required<Task>();
 
+  toggleTaskStatus() {
+    this.task().checked = !this.task().checked;
+    if (this.task().status === 'incomplete') {
+      this.task().status = 'completed';
+    } else {
+      this.task().status = 'incomplete';
+    }
+
+    this.taskService.updateTask(this.task());
+  }
 }
