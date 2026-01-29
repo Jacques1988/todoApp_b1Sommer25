@@ -9,8 +9,4 @@ import { Task } from '../../shared/models/task';
 })
 export class TaskComponent {
   task = input.required<Task>();
-
-  ngOnInit() {
-    console.log(this.task());
-  }
 }
